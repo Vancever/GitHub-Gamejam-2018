@@ -3,34 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Bag 
+public class Inventory 
 {
     private int _totalItems;
     private int _totalWeight;
     public List<Item> _items;
 
-    public Bag() 
+    public Inventory() 
     {
-        _totalWeight = 0;
+        _items = new List<Item>();
     }
 
-    public int TotalWeight 
+    public float TotalWeight 
     {
-        get { return _totalWeight; }
-        set 
-        {
-            _totalWeight = value;
-
-            if (_items.Any(x => x.isCollectable)) //Grabs the list of items and lambda selects the ones collectable
+        get {
+            float weight = 0;
+            foreach(Item item in _items)
             {
-                //TODO:
+                weight += item.Weight;
             }
         }
     }
 
     public int TotalItems 
     {
-        get { return _totalItems; }
+        get { return _items.length; }
     }
 
 
