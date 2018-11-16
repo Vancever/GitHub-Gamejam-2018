@@ -94,6 +94,8 @@ MonoBehaviour:
   rb: {fileID: 50643719679133454}
   impactEffect: {fileID: 1815489111368510, guid: 1db0048dfb8f9c242b04294aabf7a3e4,
     type: 2}
+  CreatedImpactEffect: {fileID: 0}
+  isDestroyed: 0
 --- !u!212 &212396332088983008
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -127,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1327610679
-  m_SortingLayer: 3
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300010, guid: 75dcb52732589ec4d8c27fb0f8814d01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
