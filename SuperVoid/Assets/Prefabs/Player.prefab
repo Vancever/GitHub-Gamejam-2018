@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114152840813545872}
   - component: {fileID: 95010409305241994}
   - component: {fileID: 114744145092556600}
+  - component: {fileID: 114364443467205672}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e18f14f5f04da44b1cde1d9f431765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   controller: {fileID: 114360469423143538}
   animator: {fileID: 95010409305241994}
   runSpeed: 30
@@ -305,6 +307,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114364443467205672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471976264410476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869bd832a9e836342b60defdec9c522b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWeight: 10
+  _items: []
 --- !u!114 &114744145092556600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,8 +332,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4137544421813058}
+  bulletAnimation: {fileID: 0}
+  bulletPrefab: {fileID: 0}
   damage: 40
-  lineRenderer: {fileID: 120311797697149514}
 --- !u!120 &120311797697149514
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -444,7 +460,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1327610679
-  m_SortingLayer: 3
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f55877a24c8e93f49a6998ad0d8b504c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

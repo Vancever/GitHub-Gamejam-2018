@@ -1,15 +1,22 @@
-public class Item
+using UnityEngine;
+
+public class Item : MonoBehaviour
 {
+    public string _name;
+    public float _weight;
+    public string _description;
+    public bool _isCollectable;
+    public ItemType _type;
+
     public string Name { get; set; }
-    public string Value { get; set; }
     public float Weight { get; set; }
     public string Description { get; set; }
-    public bool isCollectable { get; set; }
-    public CategoryType Type { get; set; }
+    public bool IsCollectable { get; set; }
+    public ItemType Type { get; set; }
 
 }
 
-public enum CategoryType
+public enum ItemType
 {
-    Scrap, Water, Food, Other
+    Scrap, Water, Food, Fuel, Other
 }
