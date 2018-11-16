@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using UnityEngine;
 
-public class Inventory 
+public class Inventory : MonoBehaviour
 {
-    private int _totalItems;
-    private int _totalWeight;
+    public float maxWeight;
     public List<Item> _items;
 
     public Inventory() 
@@ -18,16 +16,19 @@ public class Inventory
     {
         get {
             float weight = 0;
+
             foreach(Item item in _items)
             {
                 weight += item.Weight;
             }
+
+            return weight;
         }
     }
 
     public int TotalItems 
     {
-        get { return _items.length; }
+        get { return _items.Count; }
     }
 
 
