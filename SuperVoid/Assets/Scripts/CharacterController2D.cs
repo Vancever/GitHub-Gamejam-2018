@@ -46,8 +46,6 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        m_JumpForce -= Health_Speed_Effect;
-
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
 

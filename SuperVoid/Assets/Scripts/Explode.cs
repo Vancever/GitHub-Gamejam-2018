@@ -1,19 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Explode : MonoBehaviour
 {
-
-    //public BodyPart bodyPart;
-    //public int totalParts;
-
+    [Range(0, 100)]
     public float health = 100;
 
     [Range(1, 10)]
-    public int attackValue = 8;
+    public int attackValue = 1;
 
-    [Range(1, 10)]
-    public int healthBoost = 8;
+    [Range(0, 4)]
+    public int healthBoost = 0;
     public bool safe = true;
 
     public bool isDead = false;
@@ -31,7 +27,7 @@ public class Explode : MonoBehaviour
         {
             if (!safe)
             {
-                health -= (float)attackValue;
+                health -= attackValue;
             }
             else
             {
@@ -111,21 +107,6 @@ public class Explode : MonoBehaviour
     public void OnExplode()
     {
         Destroy(gameObject);
-
-        //var t = transform;
-
-        //for (int i = 0; i < totalParts; i++)
-        //{
-        //    BodyPart clone = Instantiate(bodyPart, t.position, Quaternion.identity) as BodyPart;
-        //    clone.rigidbody2D.AddForce(Vector3.right * (Random.Range(-50, 50)));
-        //    clone.rigidbody2D.AddForce(Vector3.up * Random.Range(100, 400));
-        //}
-
-        //GameObject go = new GameObject("ClickToContinue");
-        //ClickToContinue script = go.AddComponent<ClickToContinue>();
-        //script.scene = Application.loadedLevelName;
-        //go.AddComponent<DisplayRestartText>();
-
     }
 
 }
