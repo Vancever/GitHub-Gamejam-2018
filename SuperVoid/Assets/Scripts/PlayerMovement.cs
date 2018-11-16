@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public Rigidbody2D rb;
     public CharacterController2D controller;
     public Animator animator;
 
@@ -13,8 +14,10 @@ public class PlayerMovement : MonoBehaviour {
 
     bool jump = false;
 
-	// Use this for initialization
-	void Start () {
+    bool gravitySwitch = false;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -30,13 +33,26 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
-	}
+        if (Input.GetButtonDown("GravitySwitch"))
+        {
+            if (rb.gravityScale >= 0)
+            {
+                rb.gravityScale = -2;
+            }
+            else if (rb.gravityScale <= 0)
+            {
+                rb.gravityScale = 2;
+            }
+            controller.FlipGravity();
+            gravitySwitch = true;
+        }
+
+    }
 
     void FixedUpdate() {
 
         //Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump, gravitySwitch);
         jump = false;
-
     }
 }
