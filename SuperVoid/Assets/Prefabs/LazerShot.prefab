@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212298112529885738}
   - component: {fileID: 95874872604909774}
   - component: {fileID: 114278194147097870}
+  - component: {fileID: 114615166504394794}
   m_Layer: 0
   m_Name: LazerShot
   m_TagString: Untagged
@@ -71,6 +72,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f032acdec1aa2e549a99c348116dbfe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114615166504394794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271904577352700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a45bf576b702334998d8601bc32f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!212 &212298112529885738
 SpriteRenderer:
   m_ObjectHideFlags: 1
