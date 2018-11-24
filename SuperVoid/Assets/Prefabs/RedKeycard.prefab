@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4529493610081688}
   - component: {fileID: 212107251601616514}
   - component: {fileID: 95405832972313092}
+  - component: {fileID: 114126377326147772}
+  - component: {fileID: 58961320741724736}
   m_Layer: 0
   m_Name: RedKeycard
   m_TagString: Untagged
@@ -41,6 +43,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58961320741724736
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028015816914736}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: 0.03}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!95 &95405832972313092
 Animator:
   serializedVersion: 3
@@ -59,6 +76,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114126377326147772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028015816914736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1178ffdceae37834ba954110bbdb3bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _description: 
 --- !u!212 &212107251601616514
 SpriteRenderer:
   m_ObjectHideFlags: 1
