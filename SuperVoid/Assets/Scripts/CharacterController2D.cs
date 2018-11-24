@@ -153,4 +153,12 @@ public class CharacterController2D : MonoBehaviour
         transform.Rotate(180f, 0f, 0f);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
+
 }
