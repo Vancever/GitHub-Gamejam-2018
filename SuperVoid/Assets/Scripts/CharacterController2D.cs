@@ -158,6 +158,7 @@ public class CharacterController2D : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
+            this.GetComponent<Inventory>().collectItem(other.gameObject);
         }
     }
 

@@ -87,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1178ffdceae37834ba954110bbdb3bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
-  _description: 
+  _name: Red Keycard
+  _description: A red keycard. I wonder what it unlocks?
 --- !u!212 &212107251601616514
 SpriteRenderer:
   m_ObjectHideFlags: 1
