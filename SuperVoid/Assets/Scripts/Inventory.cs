@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<GameObject> _items;
+    public Canvas hudCanvas;
 
     public Inventory() 
     {
@@ -14,5 +15,6 @@ public class Inventory : MonoBehaviour
     public void collectItem(GameObject item)
     {
         _items.Add(item);
+        hudCanvas.GetComponent<InventoryRenderer>().UpdateInventory(_items);
     }
 }
