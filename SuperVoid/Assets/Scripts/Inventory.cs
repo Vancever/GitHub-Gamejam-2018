@@ -4,47 +4,17 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public float maxWeight;
-    public List<Item> _items;
+    public List<GameObject> _items;
+    public Canvas hudCanvas;
 
     public Inventory() 
     {
-        _items = new List<Item>();
+        _items = new List<GameObject>();
     }
 
-    public float TotalWeight 
+    public void collectItem(GameObject item)
     {
-        get {
-            float weight = 0;
-
-            foreach(Item item in _items)
-            {
-                weight += item.Weight;
-            }
-
-            return weight;
-        }
-    }
-
-    public int TotalItems 
-    {
-        get { return _items.Count; }
-    }
-
-
-    //TODO:
-    public void CallTitle()
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool Empty()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Reset()
-    {
-        throw new NotImplementedException();
+        _items.Add(item);
+        hudCanvas.GetComponent<InventoryRenderer>().UpdateInventory(_items);
     }
 }
